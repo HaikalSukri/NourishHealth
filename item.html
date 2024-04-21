@@ -60,20 +60,30 @@
     <div class="container">
       <form method="post" class="container_2" name="order-form" action="https://script.google.com/macros/s/AKfycbxp5Glg7ASL4HEX9JOZVi1ZS_vHe4UMnXDJXOpEj1p4K56tVfk6JD0mLopswF8L0uJa/exec">
         <h4>Order Here</h4>
-        <input type="text" name="your-name" class="input" placeholder="Name">
-        <input type="text" name="your-number" class="input" placeholder="Phone No.">
-        <input type="email" name="your-email" class="input" placeholder="Email">
-        <textarea name="message" class="textarea" placeholder="Put Your Order Details Here" rows="7"></textarea>
-        <input type="submit" value="Submit" id="submit">
-      </form>
+        <input type="text" name="your-name" class="input" required placeholder="Name">
+        <input type="text" name="your-number" class="input" required placeholder="Phone No.">
+        <input type="email" name="your-email" class="input" required placeholder="Email">
+        <textarea name="message" class="textarea" required placeholder="Put Your Order Details Here" rows="7"></textarea>
+        <button type="submit" class="btn btn-primary btn-lg col-md-3" data-bs-toggle="modal" id="submit">
+          Submit
+        </button>
 
+      </form>
+      
       <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="true" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modalTitleId">Status</h5>
+              <!-- <h5 class="modal-title" id="modalTitleId">Status</h5> -->
+              <div class="modal-body">
+                Sending your order to our team...
+              </div>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="form-script.js"></script>
